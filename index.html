@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LIL BRADS BEATS</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-image: url('https://i.ibb.co/PMY8bk4/pichacao-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+    .header {
+      background-color: rgba(0, 0, 0, 0.85);
+      padding: 1rem;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+    .beats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      padding: 2rem;
+    }
+    .beat-card {
+      background-color: rgba(0, 0, 0, 0.8);
+      border-radius: 10px;
+      padding: 1rem;
+      backdrop-filter: blur(4px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .beat-card audio {
+      width: 100%;
+      margin-top: 1rem;
+    }
+    .free-label {
+      color: limegreen;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    .buy-button, .download-button {
+      background-color: limegreen;
+      color: black;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 0.75rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">LIL BRADS BEATS</div>
+  <div class="beats">
+    <div class="beat-card">
+      <div class="free-label">🆓 GRATUITO</div>
+      <div>Favela Dreams</div>
+      <audio controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3" />
+      </audio>
+      <button class="download-button" onclick="window.open('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3')">Baixar Beat</button>
+    </div>
+    <div class="beat-card">
+      <div>Rua Escura</div>
+      <audio controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mp3" />
+      </audio>
+      <button class="buy-button" onclick="navigator.clipboard.writeText('lilbradsbeats@gmail.com'); alert('Chave Pix copiada!')">Comprar via Pix</button>
+    </div>
+  </div>
+</body>
+</html>
